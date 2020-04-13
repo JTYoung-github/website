@@ -1,0 +1,3 @@
+#! /bin/bash
+
+sudo /usr/local/bin/docker-compose exec webapp ./manage.py shell -c "from django.contrib.auth.models import User; User.objects.create_superuser('testadmin', 'admin@example.com', 'Password+1')"
