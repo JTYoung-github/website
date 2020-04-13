@@ -57,7 +57,7 @@ resource "aws_instance" "webserver" {
         type = "ssh"
         user = var.user
         host = self.public_ip
-        private_key = "${file("/home/ec2-user/terraform/test_web_app_deployment/Linux.pem")}"
+        private_key = "${file("Linux.pem")}"
     }
 
         source      = "createadmin"
@@ -71,7 +71,7 @@ resource "aws_instance" "webserver" {
       	type = "ssh"
       	user = var.user
       	host = self.public_ip
-      	private_key = "${file("/home/ec2-user/terraform/test_web_app_deployment/Linux.pem")}"
+      	private_key = "${file("Linux.pem")}"
     }
     
     inline = [
