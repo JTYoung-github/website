@@ -14,6 +14,7 @@ variable "hostname" {
 
 resource "null_resource" "example1" {
 
+#need to upload a file with some of the commands, because it doesn't work using Terraform's syntax. This file contains the command to create a new Admin
 provisioner "file" {
         connection {
         type = "ssh"

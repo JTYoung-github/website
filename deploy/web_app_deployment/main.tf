@@ -52,6 +52,7 @@ resource "aws_instance" "webserver" {
   key_name               = var.key_pair  #  "Linux"
   vpc_security_group_ids = [aws_security_group.instance.id]
   
+  #need to upload a file with some of the commands, because it doesn't work using Terraform's syntax. This file contains the command to create a new Admin
     provisioner "file" {
         connection {
         type = "ssh"
